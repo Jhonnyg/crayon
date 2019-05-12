@@ -21,12 +21,12 @@ solution "crayon"
     location ( "build" )
 
     flags {
-		"FatalWarnings",
+        "FatalWarnings",
         "NoPCH"
     }
 
     includedirs { path.join("src"), path.join("libs","include") }
-	libdirs     { path.join("libs","x86_64-linux") }
+    libdirs     { path.join("libs","x86_64-linux") }
 
     configuration "Debug"
         defines { "DEBUG" }
@@ -37,7 +37,7 @@ solution "crayon"
         flags   { "Optimize" }
 
 project ("crayon_simple")
-	kind        ( "ConsoleApp" )
-	files       { path.join("simple","main.cpp") }
-	includedirs { path.join("simple"), path.join("deps") }
-	targetdir   ( path.join("build") )
+    kind        ( "ConsoleApp" )
+    files       { path.join("simple","main.cpp") }
+    includedirs { path.join("simple"), path.join("deps") }
+    targetdir   ( path.join("build") )
